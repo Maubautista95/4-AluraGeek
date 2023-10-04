@@ -5,19 +5,30 @@ import styled from "styled-components";
 const EstilosButtonHeader = styled.button`
     width: 180.13px;
     height: 54px;
-    background-color: ${(props) => props.backgroundColor || "#000000"};
+    background: ${(props) => props.background_color || "#000000"};
     color: ${(props) => props.color || "white"};
     border-radius: 4px;
-    border-color: ${(props) => props.borderColor || "#F5F5F5"};
+    border-color: ${(props) => props.border_color || "#F5F5F5"};    
+    border-size: 1px;
     font-size: 1.25rem;
-`
+    transition: 0.85s;
 
-const Button = ({ nombre, backgroundColor, color, borderColor }) => {
+    &&:hover{
+        background: rgb(37,125,233);
+        background: radial-gradient(circle, rgba(37,125,233,1) 0%, rgba(2,0,36,1) 96%, rgba(37,125,233,1) 100%); 
+        
+    }
+
+`
+ 
+const Button = ({ nombre, background_color, color, border_color, type }) => {
+    console.log(type)
     return (
         <EstilosButtonHeader
-            backgroundColor={backgroundColor}
+            background_color={background_color}
             color={color}
-            borderColor={borderColor}
+            border_color={border_color}
+            type={type}
         >
             {nombre}
         </EstilosButtonHeader>

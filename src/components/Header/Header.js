@@ -18,9 +18,9 @@ const Header = () =>{
 
     return <>
     <EstilosHeader>
-    <a href="#"><img src={Logo}></img></a>
+    <a href="/"><img src={Logo}></img></a>
     
-    <Button nombre={"Nuevo video"} color={"white"} backgroundColor={"black"} borderColor={"#F5F5F5"} />
+    <a href="/nuevo_video"><Button nombre={"Nuevo video"} color={"white"} background_color={"black"} border_color={"#F5F5F5"} /></a>
        
     </EstilosHeader>
     

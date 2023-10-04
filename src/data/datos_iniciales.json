@@ -1,0 +1,57 @@
+{
+  "frontend": {
+    
+    "nombre": "Front End",
+
+    "section": {
+      "titulo": "Front End",
+      "subtitulo": "Challenge React",
+      "color": "#6BD1FF"
+    },
+    "videos": {
+      "video1": {
+        "nombre": "¿Qué significa pensar como programador?",
+        "video_url": "https://www.youtube.com/watch?v=ov7vA5HFe6w&t=4s&pp=ygUwcXVlIHNpZ25pZmljYSBwZW5zYXIgY29tbyBwcm9ncmFtYWRvciBqYXZhc2NyaXB0",
+        "thumbnail_url": "https://i.ytimg.com/vi/ov7vA5HFe6w/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC2B6wphxS2RA7tQcOphXdyi6WF4g"
+      },
+      "video2": {}
+    }
+  },
+  "backend": {
+
+    "nombre": "Back End",
+
+    "section": {
+      "titulo": "Back End",
+      "subtitulo": "Formación Back End de Alura Latam",
+      "color": "#00C86F"
+    },
+    "videos": {
+      "video1": {
+        "nombre": "Spring Framework",
+        "video_url": "https://www.youtube.com/watch?v=t-iqt1b2qqk",
+        "thumbnail_url": "https://i.ytimg.com/vi/t-iqt1b2qqk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAjy-AQhBnJTTm-AJ0IMcn_8YKWrg"
+      },
+      "video2": {
+        "nombre": "¿Qué es SQL y NoSQL?",
+        "video_url": "https://www.youtube.com/watch?v=cLLKVd5CNLc&pp=ygUacXXDqSBlcyBzcWwgeSBubyBzcWwgYWx1cmE%3D",
+        "thumbnail_url": "https://i.ytimg.com/vi/cLLKVd5CNLc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDyFVbM4yUyMj22WNRq-uKhpLS8NQ"
+      },
+      "video3": {
+        "nombre": "¿Simplificando tu código en Java: Conoce los enum #AluraMás",
+        "video_url": "https://www.youtube.com/watch?v=EoPvlE85XAQ",
+        "thumbnail_url": "https://i.ytimg.com/vi/EoPvlE85XAQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAFbjGz8uhDWikgJo3WcW54ye03Wg"
+      }
+    }
+  },
+  "innovacionygestion": {
+
+    "nombre":"Innovación y gestión",
+
+    "section":{
+      "titulo": "Innovación y Gestión",
+      "subtitulo": "Formación Innovación y Gestión de Alura Latam",
+      "color": "#FE8C2A"
+    }
+  }
+}
