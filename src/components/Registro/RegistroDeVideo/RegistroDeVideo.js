@@ -1,8 +1,8 @@
 import { React, useState } from "react";
 import styled from "styled-components";
-import CampoTexto from "../../CampoTexto/CampoTexto";
+import InputComponent from "../../InputComponent/InputComponent";
 import SelectComponent from "../../Select/SelectComponent";
-import { MenuItem } from "@mui/material";
+import { Input, MenuItem } from "@mui/material";
 import TextArea from "../../TextArea/TextArea";
 import Button from "../../Button/Button";
 
@@ -24,7 +24,7 @@ const TituloH1 = styled.h1`
 const DivBotones = styled.div`
     margin: 15px;
     display: flex;
-    width: 60vw;
+    width: 80vw;
     justify-content: space-between;
 `
 
@@ -69,8 +69,8 @@ const RegistroDeVideo = ({ dataCategories }) => {
     console.log(datosAEnviar)
   }
 
-  const resetearCampos = () => {
-    actualizarTitulo="";
+  const resetearHooks = () => {
+    actualizarTitulo('');
     actualizarLinkVideo('');
     actualizarLinkImgVideo('');
     actualizarCategoria('');
@@ -82,14 +82,15 @@ const RegistroDeVideo = ({ dataCategories }) => {
   return (<>
     <TituloH1>Nuevo Video</TituloH1>
     <FormNuevoVideo onSubmit={manejarEnvio}>
-      <CampoTexto placeholder={"Título"} type={"text"} onChange={(e) => actualizarTitulo(e.target.value)} />
-      <CampoTexto placeholder={"Link del video"} type={"text"} onChange={(e) => actualizarLinkVideo(e.target.value)} />
-      <CampoTexto placeholder={"Link imagen del video"} type={"text"} onChange={(e) => actualizarLinkImgVideo(e.target.value)} />
+      <InputComponent placeholder={"Título"} type={"text"} onChange={(e) => actualizarTitulo(e.target.value)} value={titulo}/>
+      <InputComponent placeholder={"Link del video"} type={"text"} onChange={(e) => actualizarLinkVideo(e.target.value)} value={linkVideo}/>
+      <InputComponent placeholder={"Link imagen del video"} type={"text"} onChange={(e) => actualizarLinkImgVideo(e.target.value)} value={linkImgVideo}/>
 
       <SelectComponent
         label={"Selecciona una categoría"}
         value={categoría}
         onChange={(newValue) => actualizarCategoria(newValue)}
+        data-categoria="selectCategoria"
       >
         {Object.keys(dataCategories).map((sectionKey) => (
           <MenuItem key={sectionKey} value={sectionKey}>
@@ -97,10 +98,17 @@ const RegistroDeVideo = ({ dataCategories }) => {
           </MenuItem>
         ))}
       </SelectComponent>
-      <TextArea placeholder={"Descripción"} label={"Descripcion"} onChange={(e) => actualizarDescripcion(e.target.value)}
-        value={descripcion}></TextArea>
+      
+      <TextArea 
+      
+      placeholder={"Descripción"} 
+      label={"Descripcion"} 
+      onChange={(e) => actualizarDescripcion(e.target.value)}
+      value={descripcion}>
+         
+      </TextArea>
 
-      <CampoTexto placeholder={"Campo de seguridad"} type={"text"} onChange={(e) => actualizarCampoDeSeguridad(e.target.value)} />
+      <InputComponent placeholder={"Campo de seguridad"} type={"text"} onChange={(e) => actualizarCampoDeSeguridad(e.target.value)} value={campoDeSeguridad} />
       <DivBotones>
         <DivGuardarLimpiar>
           <Button type="submit" background_color="#2A7AE4" nombre="Nuevo video">Guardar</Button>
@@ -108,16 +116,15 @@ const RegistroDeVideo = ({ dataCategories }) => {
             type="button"
             background_color="#9E9E9E"
             nombre="Limpiar"
-            onClick={() => {
-              console.log("limpiar")
-            }}
+            color="black"
+            onClick={()=>{resetearHooks()}}
           >
             Limpiar
           </Button>
 
         </DivGuardarLimpiar>
         <div>
-          <Button nombre="Nueva categoría" background_color="#2A7AE4" ></Button>
+          <a href="/nueva_categoria"><Button type="button" nombre="Nueva categoría" background_color="#2A7AE4"></Button></a>
         </div>
       </DivBotones>
 

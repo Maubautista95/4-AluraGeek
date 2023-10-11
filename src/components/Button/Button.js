@@ -11,24 +11,25 @@ const EstilosButtonHeader = styled.button`
     border-color: ${(props) => props.border_color || "#F5F5F5"};    
     border-size: 1px;
     font-size: 1.25rem;
-    transition: 0.85s;
+    transition: 0.5s;
 
     &&:hover{
         background: rgb(37,125,233);
         background: radial-gradient(circle, rgba(37,125,233,1) 0%, rgba(2,0,36,1) 96%, rgba(37,125,233,1) 100%); 
-        
+        color: white;
     }
 
 `
  
-const Button = ({ nombre, background_color, color, border_color, type }) => {
-    console.log(type)
+const Button = ({ nombre, background_color, color, border_color, type, onClick }) => {
+    
     return (
         <EstilosButtonHeader
-            background_color={background_color}
+            background_color={background_color} 
             color={color}
-            border_color={border_color}
+            border_color={background_color}
             type={type}
+            onClick={onClick}
         >
             {nombre}
         </EstilosButtonHeader>

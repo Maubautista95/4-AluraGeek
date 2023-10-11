@@ -1,12 +1,12 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
 
-const CampoTexto = ({ label, placeholder, onChange, value }) => {
+const InputComponent = ({ label, placeholder, onChange, value, type }) => {
   
   const textFieldStyles = {
     backgroundColor: "#53585D",
     padding: "7px 12px",
-    width: "60vw",
+    width: "80vw",
     margin: "10px 0",
   };
 
@@ -28,8 +28,9 @@ const CampoTexto = ({ label, placeholder, onChange, value }) => {
       value={value}
       InputProps={{ style: inputTextStyles }}
       InputLabelProps={{ style: labelStyles }}
+      type={type}
     />
   );
 };
 
-export default CampoTexto;
+export default InputComponent;

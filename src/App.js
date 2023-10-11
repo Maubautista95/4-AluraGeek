@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import dataCategories from "./data/datos_iniciales.json"
 import NuevoVideo from "./pages/NuevoVideo/NuevoVideo";
+import NuevaCategoria from "./pages/NuevaCategoria/NuevaCategoria";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home dataCategories={dataCategories} />} />
           <Route path="nuevo_video" element={<NuevoVideo dataCategories={dataCategories} />} />
+          <Route path="nueva_categoria" element={<NuevaCategoria dataCategories={dataCategories} />} />
         </Routes>
         <Footer />
       </Router>

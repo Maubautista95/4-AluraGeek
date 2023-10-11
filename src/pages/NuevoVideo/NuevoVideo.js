@@ -10,8 +10,7 @@ const EstilosNuevoVideo = styled.div`
 
 
 const NuevoVideo = ({ dataCategories }) => {
-    console.log(dataCategories.section);
-
+    
     return (
         <>
             <EstilosNuevoVideo>

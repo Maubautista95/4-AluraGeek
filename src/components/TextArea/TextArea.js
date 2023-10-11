@@ -5,7 +5,7 @@ import styled from "styled-components";
 const CustomTextarea = styled(TextareaAutosize)`
   background-color: #53585D;
   padding: 25px 12px;
-  width: 60vw;
+  width: 80vw;
   margin: 18px 0;
   color: #d6d6d7;
   font-size: 17px;

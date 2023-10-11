@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
+import InputLabel from "@mui/material/InputLabel";
+import FormControl from "@mui/material/FormControl";
 
 const selectFieldStyles = {
   backgroundColor: "#53585D",
-  padding: "7px 0",
-  width: "61vw",
+  width: "80vw",
   margin: "5px 0",
+  padding: "7px 12px",
   color: "#d6d6d7",
 };
+
+const estilosTexto ={
+  color: "#d6d6d7",
+}
 
 const SelectComponent = ({ label, children, value, onChange }) => {
   const handleChange = (event) => {
@@ -16,16 +22,19 @@ const SelectComponent = ({ label, children, value, onChange }) => {
     onChange(newValue);
   };
 
+  const placeholderValue = "Escoja una categoría";
+
   return (
     <div>
-      <Select sx={selectFieldStyles} value={value} onChange={handleChange}
-      >
-        
-        <MenuItem value="" disabled>
-          Selecciona una categoría
-        </MenuItem>
-        {children}
-      </Select>
+      <FormControl sx={selectFieldStyles}>
+        <InputLabel sx={estilosTexto}>{placeholderValue}</InputLabel>
+        <Select value={value} onChange={handleChange}  sx={estilosTexto} >
+          <MenuItem disabled value="">
+            {placeholderValue}
+          </MenuItem>
+          {children}
+        </Select>
+      </FormControl>
     </div>
   );
 };
