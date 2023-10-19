@@ -2,11 +2,17 @@ import React from "react";
 import RegistroDeCategoria from "../../components/Registro/RegistroDeCategoria/RegistroDeCategoria";
 
  
-const NuevaCategoria = ()=>{
+const NuevaCategoria = ({dataCategories, editarCategoriaTabla, eliminarCategoriaTabla})=>{
+
+    
+   
 
     return (<>
 
-        <RegistroDeCategoria>
+        <RegistroDeCategoria 
+        dataCategories={dataCategories}
+        editarCategoriaTabla={editarCategoriaTabla}
+        eliminarCategoriaTabla={eliminarCategoriaTabla}>
 
 
         </RegistroDeCategoria>

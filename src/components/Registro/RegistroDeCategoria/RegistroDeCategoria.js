@@ -4,6 +4,7 @@ import styled from "styled-components";
 import InputComponent from "../../InputComponent/InputComponent";
 import TextArea from "../../TextArea/TextArea";
 import Button from "../../Button/Button";
+import CategoryTable from "../../CategoryTable/CategoryTable";
 
 
 const H2Estilizado = styled.h2`
@@ -29,8 +30,8 @@ const ButtonsDiv = styled.div`
 `
 
 
-const RegistroDeCategoria = () => {
-    
+const RegistroDeCategoria = ( {dataCategories, editarCategoriaTabla, eliminarCategoriaTabla} ) => {
+
     //Hooks//
 
     const [nombreCategoria, actualizarNombreCategoria] = useState("");
@@ -74,7 +75,10 @@ const RegistroDeCategoria = () => {
                 <Button nombre="Limpiar" background_color="#9E9E9E" color="black" type="button" onClick={()=>{resetearHooksDeCategorias()}}/>
             </ButtonsDiv>
         </FormPagina>
-
+        <CategoryTable dataCategories = {dataCategories} 
+        editarCategoriaTabla={editarCategoriaTabla} 
+        eliminarCategoriaTabla={eliminarCategoriaTabla}
+        />
     </>)
 
 

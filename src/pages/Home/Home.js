@@ -56,16 +56,19 @@ const DivVideoPrincipal = styled.div`
     padding: 1vw;
 `
 
-const Home = ({dataCategories}) => {
+const Home = ({ dataCategories }) => {
 
     const datosFrontEndSection = dataCategories.frontend.section;
     const datosFrontEndVideos = dataCategories.frontend.videos;
 
-  
+
     const datosBackEndSection = dataCategories.backend.section;
     const datosBackEndVideos = dataCategories.backend.videos;
 
-    
+    const datosInnovacionSection = dataCategories.innovacionygestion.section;
+    const datosInnovacionVideos = dataCategories.innovacionygestion.videos;
+
+
 
     console.log(datosBackEndVideos);
 
@@ -82,22 +85,42 @@ const Home = ({dataCategories}) => {
                         un problema para poder aplicar todos los conocimientos adquiridos en la formación React.</p>
                 </DivTextoPrincipal>
                 <DivVideoPrincipal>
-                    <VideoCard          
-                     color={datosFrontEndSection.color}
-                    video_url={datosFrontEndVideos.video1.video_url}
-                    thumbnail_url={datosFrontEndVideos.video1.thumbnail_url}>
+                    <VideoCard
+                        color={datosFrontEndSection.color}
+                        video_url={datosFrontEndVideos.video1.video_url}
+                        thumbnail_url={datosFrontEndVideos.video1.thumbnail_url}>
                     </VideoCard>
                 </DivVideoPrincipal>
             </DivIntroduccion>
 
-            <Carrusel 
+            <Carrusel
 
-            titulo_carrusel={datosBackEndSection.titulo}
-            subtitulo_carrusel={datosBackEndSection.subtitulo} 
-            color={datosBackEndSection.color}
-            datosVideos = {datosBackEndVideos}>
-        
+                color={datosFrontEndSection.color}
+                datosVideos={datosFrontEndVideos}>
+
             </Carrusel>
+
+            <Carrusel
+
+                titulo_carrusel={datosBackEndSection.titulo}
+                subtitulo_carrusel={datosBackEndSection.subtitulo}
+                color={datosBackEndSection.color}
+                datosVideos={datosBackEndVideos}>
+
+            </Carrusel>
+
+
+            <Carrusel
+
+                titulo_carrusel={datosInnovacionSection.titulo}
+                subtitulo_carrusel={datosInnovacionSection.subtitulo}
+                color={datosInnovacionSection.color}
+                datosVideos={datosInnovacionVideos}>
+
+            </Carrusel>
+
+
+
         </DivPrincipal>
 
 
